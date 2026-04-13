@@ -1,0 +1,27 @@
+@use '../../../global/variables' as v;
+
+.logo {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    
+
+    &__text{
+        font-weight: 700;
+        font-size: 27px;
+        line-height: 32px;
+        margin: 0;
+
+        @include v.vp-767 {
+            font-size: 19px;
+            line-height: 23px;
+        }
+    }
+
+    &__icon {
+        @include v.vp-767 {
+            width: 14px;
+            height: 18px;
+        }
+    }
+}

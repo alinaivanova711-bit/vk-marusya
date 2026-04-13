@@ -1,0 +1,164 @@
+@use '../../../global/variables' as v;
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  z-index: 1000;
+
+
+  &__video-wrapper {
+    position: relative;
+    width: 960px;
+    height: 540px;
+    aspect-ratio: 16 / 9;
+
+
+    @include v.vp-1023 {
+      width: 663px;
+      height: 375px;
+    }
+
+    @include v.vp-767 {
+      width: 375px;
+      height: 212px;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    right: -60px;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 30;
+    transition: all 0.2s ease;
+
+
+
+    &:hover {
+      transform: scale(1.1);
+      background-color: #f0f0f0;
+    }
+
+    @media (max-width: 1100px) {
+      top: 15px;
+      right: 10px;
+    }
+
+    @include v.vp-1023 {
+      width: 36px;
+      height: 36px;
+
+      svg {
+        width: 18px;
+        height: 18px;
+      }
+    }
+
+    @include v.vp-767 {
+      top: 8px;
+      right: 8px;
+      width: 32px;
+      height: 32px;
+
+      svg {
+        width: 13px;
+        height: 13px;
+      }
+    }
+  }
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 25;
+    cursor: pointer;
+  }
+
+  &__play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: black;
+    border-radius: 50%;
+    padding: 20px;
+    z-index: 30;
+    cursor: pointer;
+
+  }
+
+  &__icon {
+    @include v.vp-1023 {
+      width: 15px;
+      height: 18px;
+    }
+
+  }
+
+  &__title {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    padding: 24px 40px;
+    max-width: 9120px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    z-index: 30;
+    margin: 0;
+    width: 100%;
+
+    @include v.vp-767 {
+      bottom: -40px;
+      left: 0;
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+
+  &__loader {
+    position: absolute;
+    inset: 0;
+    background: rgba(128, 128, 128, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 40;
+
+    .spinner {
+      width: 40px;
+      height: 40px;
+      border: 5px solid #ccc;
+      border-top-color: #fff;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  }
+}

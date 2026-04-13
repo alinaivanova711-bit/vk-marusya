@@ -1,0 +1,52 @@
+@use '../../../global/variables' as v;
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 12px;
+
+
+  &__title{
+    color: #000;
+  }
+
+  &__field {
+    position: relative;
+
+    &--error {
+      input {
+        border-color: #FF7575;
+
+      }
+      .register-form__icon {
+        color: #FF7575;
+      }
+    }
+  }
+
+  &__icon {
+    color:  rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 16px;
+    left: 16px;
+  }
+}
+
+.register-finish {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__text{
+    color: #000;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+  }
+
+  &__btn{
+    width: 100%;
+  }
+}

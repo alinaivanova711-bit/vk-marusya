@@ -1,0 +1,84 @@
+@use '../../../global/variables' as v;
+
+.SettingProfile {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    &__card {
+        display: flex;
+        align-items: start;
+        gap: 16px;
+    }
+
+    &__img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 50%;
+        color: white;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 26px;
+        padding: 18px;
+
+        @include v.vp-767 {
+            padding: 11px 14px;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    &__info-description {
+        margin: 0;
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: 400;
+        
+
+        @include v.vp-767 {
+            font-size: 14px;
+            line-height: 20px;
+            white-space: normal;
+        }
+    }
+
+    &__text {
+        margin: 0;
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: 700;
+
+
+        @include v.vp-767 {
+            font-size: 18px;
+            line-height: 24px;
+            white-space: normal;
+            word-break: break-all;
+        }
+    }
+    &__btn{
+        width: 262px;
+
+        @include v.vp-767 {
+            width: 335px;
+        }
+
+        @media (max-width: 400px) {
+            width: 100%;;
+        }
+    }
+
+}

@@ -1,0 +1,36 @@
+@use "../../../global/variables" as v;
+
+.rating {
+  color: v.$color-white;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  border-radius: 16px;
+  padding: 2px 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  height: 20px;
+
+  &__icon {
+    width: 10px;
+    height: 10px;
+  }
+
+  &--lose {
+    background-color: v.$color-red;
+  }
+
+  &--low {
+    background-color: v.$color-aztec;
+  }
+
+  &--medium {
+    background-color: v.$color-apple;
+  }
+
+  &--high {
+    background-color: v.$color-gold;
+  }
+}

@@ -1,0 +1,88 @@
+@use '../../../global/variables' as v;
+
+.header {
+    display: flex;
+    gap: 40px;
+    padding: 24px 0;
+    margin: 0;
+    align-items: center;
+    justify-content: space-between;
+
+    @include v.vp-1023 {
+        gap: 15px;
+        padding: 16px 0;
+    }
+
+    @include v.vp-767 {
+        padding: 12px 0;
+    }
+
+    &__logo{
+        margin: 0 40px 0 0;
+
+        @include v.vp-1023 {
+            margin: 0;
+        }
+    }
+
+    &__wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+
+        @include v.vp-1023 {
+            gap: 20px;
+            justify-content: space-between;
+            padding: 16px 0;
+        }
+
+        @include v.vp-767 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+   &__link {
+        text-decoration: none;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 32px;
+        margin: 0;
+        cursor: pointer;
+        
+
+        &:hover {
+            text-decoration: underline solid rgba(220, 93, 252, 1)
+        }
+
+        &--delete {
+            @media (max-width: 815px) {
+                display: none;
+            }
+        }
+        
+    }
+
+    &__link-text {
+        @include v.vp-767 {
+            display: none;
+        }
+    }
+
+    &__link-icon {
+        display: none;
+
+        @include v.vp-767 {
+            display: flex;
+        }
+    }
+
+    &__button {
+        background-color: transparent;
+        color: white;
+        border: none;
+        padding: 0;
+    }
+}

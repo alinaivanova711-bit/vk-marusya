@@ -1,0 +1,94 @@
+@use '../../../global/variables' as v;
+
+.FavoriteFilms {
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        list-style-type: none;
+        gap: 64px 40px;
+        padding: 0;
+        margin: 0;
+
+        @media (max-width: 1200px) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        @include v.vp-1023 {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @include v.vp-767 {
+            display: flex;
+            gap: 40px;
+            overflow-x: auto;
+            padding: 0 20px 0;
+            margin: 0 -20px 0;
+
+        }
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    &__item {
+        height: 336px;
+        border-radius: 16px;
+        position: relative;
+        box-shadow: 0px 0px 80px 0px rgba(255, 255, 255, 0.33);
+
+
+        @include v.vp-767 {
+            width: 224px;
+            flex-shrink: 0; 
+        }
+    }
+
+    &__item:hover {
+        .FavoriteFilms__btn-wrapper {
+            display: flex;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+
+    &__link {
+        cursor: pointer;
+        overflow: hidden;  
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 15px;
+    }
+
+    &__btn-wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        border-radius: 24px;
+        padding: 12px;
+        position: absolute;
+        top: -15px;
+        right: -15px;
+        cursor: pointer;
+        z-index: 20;
+        display: none;
+    }
+
+    &__btn-close{
+        color: black;
+        width: 13px;
+        height: 13px;
+    }
+
+    &__button {
+        margin: 0 auto;
+    }
+
+}
+
+

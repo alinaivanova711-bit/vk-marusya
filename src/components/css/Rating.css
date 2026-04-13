@@ -1,0 +1,25 @@
+.rating {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  border-radius: 16px;
+  padding: 2px 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+.rating__icon {
+  width: 10px;
+  height: 10px;
+}
+.rating--low {
+  background-color: #777777;
+}
+.rating--medium {
+  background-color: #308E21;
+}
+.rating--high {
+  background-color: #A59400;
+}/*# sourceMappingURL=Rating.css.map */

@@ -1,0 +1,18 @@
+.footer {
+  padding: 40px 0;
+}
+.footer__socials {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  justify-content: flex-end;
+}
+.footer__socials-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 8px 7px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+}/*# sourceMappingURL=Footer.css.map */

@@ -1,0 +1,120 @@
+@use '../../../global/variables' as v;
+
+.Top10Films{
+    padding: 40px 0;
+
+    @include v.vp-1023 {
+        padding: 32px 0;
+    }
+
+    &__title{
+        color: white;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 48px;
+        margin: 0 0 64px;
+
+        @include v.vp-1023 {
+            font-size: 24px;
+            line-height: 32px;
+            margin: 0 0 20px;
+        }
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        list-style-type: none;
+        gap: 64px 40px;
+        padding: 0 10px 10px;
+        width: 100%;
+        margin: 0;
+
+        @media (max-width: 1370px) {
+            gap: 30px 20px;
+        }
+
+        @media (max-width: 1300px) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        @media (max-width: 1200px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @include v.vp-1023 {
+            display: flex;
+            overflow-x: auto;
+            gap: 40px;
+           padding: 20px 20px 0 0;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+    }
+
+    &__item {
+        height: 336px;
+        border-radius: 16px;
+        position: relative;
+        box-shadow: 0px 0px 80px 0px rgba(255, 255, 255, 0.33);
+        aspect-ratio: 224 / 336;
+        
+
+        @include v.vp-1023 {
+            width: 224px;
+            box-shadow: none;
+
+            &:first-child {
+                margin-left: 10px;
+            }
+        }
+
+
+
+        @media (max-width: 600px) {
+            height: 502;
+        }
+    }
+
+    &__item:hover {
+        .FavoriteFilms__btn-wrapper {
+            display: flex;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+
+    &__link {
+        cursor: pointer;
+        // overflow: hidden;
+          
+    }
+
+    &__img {
+        height: 100%;
+        object-fit: cover;
+        border-radius: 15px;
+        
+    }
+
+    &__number{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        color: #6A5DC2;
+        border-radius: 50px;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 32px;
+        padding: 8px 24px;
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        cursor: pointer;
+        z-index: 100;
+        
+    }
+
+}

@@ -1,0 +1,116 @@
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.modal__video-wrapper {
+  position: relative;
+  width: 960px;
+  height: 540px;
+}
+.modal__close {
+  position: absolute;
+  right: -60px;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 30;
+  transition: all 0.2s ease;
+}
+.modal__close:hover {
+  transform: scale(1.1);
+  background-color: #f0f0f0;
+}
+@media (max-width: 1024px) {
+  .modal__close {
+    right: -50px;
+    width: 36px;
+    height: 36px;
+  }
+  .modal__close svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+@media (max-width: 768px) {
+  .modal__close {
+    right: -40px;
+    width: 32px;
+    height: 32px;
+  }
+  .modal__close svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+.modal__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 25;
+  cursor: pointer;
+}
+.modal__play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  color: black;
+  border-radius: 50%;
+  padding: 20px;
+  z-index: 30;
+  cursor: pointer;
+}
+.modal__title {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  padding: 24px 40px;
+  max-width: 920px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  z-index: 30;
+  margin: 0;
+  width: 100%;
+}
+.modal__loader {
+  position: absolute;
+  inset: 0;
+  background: rgb(128, 128, 128);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 40;
+}
+.modal__loader .spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #ccc;
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}/*# sourceMappingURL=TrailerModal.css.map */

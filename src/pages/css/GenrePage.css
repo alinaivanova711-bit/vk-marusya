@@ -1,0 +1,62 @@
+.GenrePage {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  padding: 64px 0 64px;
+}
+.GenrePage__wrapper-title {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin: 0;
+}
+.GenrePage__button-last {
+  border: none;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+  font-size: 20px;
+  cursor: pointer;
+  color: white;
+}
+.GenrePage__list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  list-style-type: none;
+  gap: 64px 40px;
+  padding: 0 10px 10px;
+}
+@media (max-width: 1024px) {
+  .GenrePage__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .GenrePage__list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.GenrePage__item {
+  height: 336px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+@media (max-width: 600px) {
+  .GenrePage__item {
+    height: 502;
+  }
+}
+.GenrePage__link {
+  cursor: pointer;
+}
+.GenrePage__img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 15px;
+}
+.GenrePage__button {
+  margin: 0 auto;
+}/*# sourceMappingURL=GenrePage.css.map */

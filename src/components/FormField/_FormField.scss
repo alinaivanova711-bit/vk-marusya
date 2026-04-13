@@ -1,0 +1,46 @@
+@use '../../../global/variables' as v;
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+
+ input {
+    width: 340px;
+    padding: 16px 16px 16px 52px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    font-size: 18px;
+    line-height: 24px;
+    color: black;
+    transition: all 0.2s ease;
+    outline: none;
+
+    @include v.vp-767 {
+      width: 100%;
+    }
+
+
+    &:focus-visible, &:hover {
+      border-color: #B4A9FF;
+    }
+
+    &.input-error {
+      border-color: #FF7575;
+    }
+
+    &::placeholder {
+      color: rgba(0, 0, 0, 0.4);
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+}
+
+
+
+
+

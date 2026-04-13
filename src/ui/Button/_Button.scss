@@ -1,0 +1,65 @@
+@use '../../../global/variables' as v;
+
+.button {
+  font-family: v.$ff-main;
+  border: none;
+  border-radius: 28px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+   &__text--loading {
+    opacity: 0.7; 
+  }
+
+    &[data-variant='primary'] {
+        background-color: v.$color-primary;
+        color: v.$color-white;
+    }
+
+    &[data-variant='secondary'] {
+        background-color: v.$color-grey;
+        color: v.$color-white;
+        border: 1px solid  rgba(0, 0, 0, 0.4);
+    }
+
+    &[data-variant='default'] {
+        background-color: inherit;
+        color: v.$color-black;
+    }
+
+    &[data-size='medium'] {
+        padding: 16px 48px;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 24px;
+
+        @include v.vp-1023 {
+            padding: 16px 38px;
+        }
+    }
+
+    &[data-size='small'] {
+        padding: 18px 24px;
+        font-size: 12px;
+        line-height: 18px;
+
+        @include v.vp-1023 {
+            padding: 16px 19px;
+        }
+    }
+
+    &[data-size='default'] {
+        padding: 0;
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: 700;
+    }
+
+
+    &:disabled {
+        opacity: 0.5;
+    }
+
+}

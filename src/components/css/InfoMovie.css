@@ -1,0 +1,47 @@
+.InfoMovie {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  padding: 32px 0 0;
+}
+.InfoMovie__content {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.InfoMovie__info .InfoMovieMeta__meta {
+  font-size: 18px;
+  line-height: 24px;
+  opacity: 1;
+}
+.InfoMovie__description {
+  font-size: 24px;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 32px;
+  margin: 0;
+}
+.InfoMovie__actions {
+  display: flex;
+  gap: 16px;
+  margin-top: 12px;
+}
+.InfoMovie__btn {
+  border: none;
+}
+.InfoMovie__btn--like {
+  transition: transform 0.2s ease;
+}
+.InfoMovie__btn--like:hover {
+  transform: scale(1.1);
+}
+.InfoMovie__btn--like:active {
+  transform: scale(0.95);
+}
+.InfoMovie__image {
+  height: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
+}/*# sourceMappingURL=InfoMovie.css.map */

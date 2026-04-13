@@ -1,0 +1,36 @@
+@use '../../../global/variables' as v; 
+.InfoMovieMeta{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+
+  &__meta {
+    display: flex;
+    gap: 12px;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(255, 255, 255, 0.7);
+
+    @include v.vp-1023 {
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+  }
+
+  &__rating {
+    color: v.$color-white;
+    background-color: v.$color-apple;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    border-radius: 16px;
+    padding: 2px 8px;
+  }
+  &__genre{
+    white-space: normal;
+  }
+
+
+} 
+ 

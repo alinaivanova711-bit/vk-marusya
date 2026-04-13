@@ -1,0 +1,11 @@
+.logo {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.logo__text {
+  font-weight: 700;
+  font-size: 27px;
+  line-height: 32px;
+  margin: 0;
+}/*# sourceMappingURL=Logotype.css.map */

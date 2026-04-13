@@ -1,0 +1,43 @@
+@use '../../../global/variables' as v;
+
+.footer {
+    padding: 40px 0;
+
+    @include v.vp-767 {
+        padding: 24px 0;
+    }
+
+    &__socials {
+        display: flex;
+        gap: 24px;
+        align-items: center;
+        justify-content: flex-end;
+
+        @include v.vp-767 {
+            align-items:flex-start;
+            justify-content: flex-start;
+        }
+    }
+
+    &__socials-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: v.$color-jaguar;
+        padding: 8px 7px;
+        border: 1px solid v.$color-jaguar;
+        border-radius: 8px;
+
+        @include v.vp-767 {
+            padding: 6px;
+        }
+    }
+
+    &__icon{
+        @include v.vp-767 {
+            width: 10px;
+            height: 11px;
+        }
+    }
+}
+

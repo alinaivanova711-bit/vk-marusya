@@ -1,0 +1,41 @@
+// Colors
+$color-white: #ffffff;
+$color-black: #000000;
+$color-jaguar: rgba(255, 255, 255, 0.8);
+$color-apple: #308E21;
+$color-gold: #A59400;
+$color-aztec:  #777777;
+$color-linen: #FCF0E5;
+$color-silver:  rgba(255, 255, 255, 0.5);
+$color-grey:  #393B3C;
+$color-primary: #67A5EB;
+$color-dark-gray:  #393B3C;
+$color-red: #C82020;
+$color-gradient-blue: linear-gradient(180deg, #000000 0%, rgba(39, 36, 36, 0.7) 100%),
+linear-gradient(178.73deg, rgba(39, 135, 245, 0.18) -17.53%, rgba(163, 147, 245, 0.18) 131.74%);
+
+
+
+// Typography
+$ff-main: "Play", "Arial", sans-serif;
+$ff-secondary: "Arsenal", "Arial", sans-serif;
+
+// Viewport
+$vp-tablet: 1023px;
+$vp-mobile: 767px;
+
+// Animation
+$transition-300: ease-in 0.3s;
+
+//Mixins
+@mixin vp-1023 {
+  @media (max-width: $vp-tablet) {
+    @content;
+  }
+}
+
+@mixin vp-767 {
+  @media (max-width: $vp-mobile) {
+    @content;
+  }
+}

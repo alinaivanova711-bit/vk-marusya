@@ -1,0 +1,22 @@
+.search-card {
+  display: flex;
+  gap: 16px;
+  padding: 20px 8px;
+  text-decoration: none;
+  color: #ffffff;
+}
+.search-card__img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.search-card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.search-card__title {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  margin: 0;
+}/*# sourceMappingURL=SearchCard.css.map */

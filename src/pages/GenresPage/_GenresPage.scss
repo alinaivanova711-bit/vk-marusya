@@ -1,0 +1,47 @@
+@use '../../../global/variables' as v;
+
+.GenresPage {
+  padding: 64px 0;
+
+  @include v.vp-767 {
+    padding: 30px 0px;
+  }
+
+  @include v.vp-767 {
+    padding: 16px 0px;
+  }
+
+  &__title {
+    margin: 0 0 64px;
+
+      @include v.vp-767 {
+        margin: 0 0 40px;
+      }
+  }
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 64px 40px;
+    margin: 0;
+    padding: 0 0 64px;
+  
+    @media (max-width: 1300px) {
+      grid-template-columns: repeat(3, auto);
+      gap: 48px 32px;
+      justify-content: space-around;
+    }
+
+    @media (max-width: 1000px) {
+      grid-template-columns: repeat(2, auto);
+      gap: 20px 26px;
+      justify-content: space-around;
+    }
+    
+    @media (max-width: 767px) {
+      grid-template-columns: 1fr;
+      gap: 24px;
+      width: 100%;
+    }
+  }
+  
+}
