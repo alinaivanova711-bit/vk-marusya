@@ -1,73 +1,55 @@
-# React + TypeScript + Vite
+# VK Маруся — это SPA-приложение, в котором пользователи могут:
+1. искать фильмы по названию
+2. просматривать топ-10 фильмов по рейтингу IMDb
+3. получать случайный фильм
+4. добавлять фильмы в избранное
+5. регистрироваться и авторизовываться
+6. смотреть трейлеры
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Функциональность
 
-Currently, two official plugins are available:
+###  Главная страница
+1. случайный фильм (с возможностью обновления)
+2. топ-10 фильмов
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+###  Жанры
+1. список жанров
+2. переход на страницу конкретного жанра
+3. подгрузка фильмов (infinite scroll)
 
-## React Compiler
+###  Страница фильма
+1. подробная информация
+2. трейлер (в модальном окне)
+3. добавление/удаление из избранного
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+###  Поиск
+1. поиск фильмов по названию
+2. отображение результатов в модальном окне
 
-## Expanding the ESLint configuration
+###  Авторизация
+1. регистрация и вход
+2. сохранение сессии через cookies
+3.  доступ к избранному только для авторизованных пользователей
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+###  Избранное
+1. список сохранённых фильмов
+2. доступен в личном кабинете
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+##  Технологии
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+* **React 18**
+* **TypeScript**
+* **React Router**
+* **React Query (TanStack Query)**
+* **SCSS**
+* **Axios**
+* **React Hook Form + Zod**
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+##  Особенности реализации
+1.  обновление случайного фильма без перезагрузки страницы
+2.  оптимизация запросов (исключены лишние API-вызовы)
+3.  управление серверным состоянием через React Query
+4.  модальные окна (авторизация, трейлер, поиск)
+5.  защита действий для неавторизованных пользователей
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
